@@ -1,4 +1,4 @@
-
+x
 <!-- Check to make the request method we get back from the server is set to POST and 
 	field that are filled are not empty -->
 <?php
@@ -128,10 +128,17 @@ if (isset($_POST['remark'])) {
 		 $mail->setFrom('706546983@qq.com' , 'Beijing Logic Meeting 2023');
          $mail->addAddress($clientEmail);
          $mail->Subject = 'Thanks for the registration of Beijing Logic Meeting 2023 ';
-         $mail->Body = "blank".
+         $mail->Body = "Conference Schedule \r\n".
+		               "Conference dates: 24-28 July 2023. \r\n".
+					   "Schedule: There will be five speakers reporting every day from Monday to Thursday, and Friday is free. \r\n".
+					   "Venue: Academy of Mathematics and Systems Science, Chinese Academy of Sciences. \r\n".
+					   "Lunch and Dinner: Banquet style.";
+					   
 		 $mail->send();
-		       
-
+		 
+		 
+		 
+		 
 			
 			
 			$clientName = empty($clientName);
