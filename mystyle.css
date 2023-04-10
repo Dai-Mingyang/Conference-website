@@ -16,7 +16,7 @@ body
 #contact-form  input[type=text],input[type=email]
 {
 	display: block;
-	width: 70%;
+	width: 55%;
 	background-color: #F9F9F2;
 	margin-bottom: 3px;
 	padding-top: 20px;
@@ -65,3 +65,4 @@ body
 	font-size: 0.95em;
 	text-align: left;
 }
+

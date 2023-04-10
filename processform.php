@@ -1,6 +1,28 @@
+
 <!-- Check to make the request method we get back from the server is set to POST and 
 	field that are filled are not empty -->
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+
+$mail = new PHPMailer(true);
+
+
+// 配置 SMTP 服务器
+$mail->SMTPDebug = 0;
+$mail->isSMTP();
+$mail->Host       = 'smtp.qq.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = '706546983';
+    $mail->Password   = 'qouehxqdjwmxbeaa';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
+
+
 if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 
 	// it is going to check for the POST superglobal with the value
@@ -15,7 +37,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		$clientEmail = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);}
 	if (isset($_POST['field'])) {	
 		$clientSubject = strip_tags(trim($_POST['field'])); }
-		
+	if (isset($_POST['gender'])) { 
+		$clientGender = $_POST['gender']; }
+	
 	if (isset($_POST['institute'])) {	
 		$clientInstitute = strip_tags(trim($_POST['institute'])); }	
 	// here i am taking the variable $clientMessage
@@ -38,6 +62,12 @@ if (isset($_POST['remark'])) {
 		//here variable is set to true if any validation or sanitization generates an error
 		$formerrors = true; 
 	endif; //input name field empty
+	
+	if (empty($clientGender)):
+		$err_gender = '<div class="error"> Gender is required</div>';
+		//here variable is set to true if any validation or sanitization generates an error
+		$formerrors = true; 
+	endif;
 
 	if (!preg_match("/^[a-zA-Z ]*$/",$clientName)):
 		$err_name = '<div class="error">Letters and whitespace only</div>';
@@ -73,24 +103,43 @@ if (isset($_POST['remark'])) {
 	//here i am creating if statement that verifies that there are no errors
 	// and place mail() function
 	if (!($formerrors)):
-		//Put your email address in here
-		$to = "youemailaddress@gmail.com";
-		//set the email subject, just put the title where the form is coming from 
-		$subject = "From $clientEmail -- Contact Form ";
-		// Set the message
-		$message = "$clientName says\r\n $clientMessage";
 		
+		 $mail->CharSet = 'UTF-8';
+		 $mail->setFrom('706546983@qq.com' , $clientName);
+         $mail->addAddress('daimy@ios.ac.cn');
+         $mail->Subject = 'Beijing Logic Meeting 2023, From '.$clientEmail.' -- Contact Form';
+         $mail->Body = "Name：$clientName \r\n".
+		       "E-mail：$clientEmail \r\n".
+              "Gender：$clientGender \r\n".
+              "Institute：$clientInstitute \r\n".
+              "Field：$clientSubject \r\n".
+              "Message：$clientMessage";
+			  
+
 		// issue the mail command
 		// Just to remind PHP doesn't actually mail anything
 	    // Mail is handled by your server's send mail command.
-		if (mail($to, $subject, $message)):	
+		if ($mail->send()):	
 			$msg = "Thank You! Your message has been sent.";
 			// The following code will empty the input field after form has be emailed
+			
+			$mail->ClearAllRecipients();
+			$mail->CharSet = 'UTF-8';
+		 $mail->setFrom('706546983@qq.com' , 'Beijing Logic Meeting 2023');
+         $mail->addAddress($clientEmail);
+         $mail->Subject = 'Thanks for the registration of Beijing Logic Meeting 2023 ';
+         $mail->Body = "blank".
+		 $mail->send();
+		       
+
+			
+			
 			$clientName = empty($clientName);
 			$clientEmail = empty($clientEmail);
 			$clientSubject = empty($clientSubject);
 			$clientMessage = empty($clientMessage);
 			$clientInstitute = empty($clientInstitute);
+			$clientGender = empty($clientGender);
 
 		else:
 			$msg = "Oops! Something went wrong and message couldn't be sent.";

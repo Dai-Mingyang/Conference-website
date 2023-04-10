@@ -9,6 +9,7 @@ Registration
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="stoc2022.css">
+<link rel="icon" type="image/png" href="icon.jpg" />
 <script src="jquery.js"></script>
 <script>
 $(document).ready(function() {
@@ -1227,12 +1228,13 @@ $(document).ready(function() {
 
 <table>
 <tr>
-   <td><h1 align="left">
+   <td ><h1 align="left">
    Beijing Logic Meeting<br>
-   July 24-28, 2023 in Beijing, China
+   July 24-28, 2023 in Beijing, China 
    </h1></td>
-   <td style="text-align:left;vertical-align:bottom"><table>
-        <tr><td style="text-align:left;vertical-align:bottom"><img src="CAS.png" class="logo" width=128/></td>
+
+   <td style="text-align:left;vertical-align:bottom;padding:7px"><table>
+        <tr><td style="text-align:left;vertical-align:bottom"><a href="https://english.cas.cn/" target="_blank"><img src="CAS.png" class="logo"  height=60 width=230/><a></td>
         <td style="text-align:left;vertical-align:bottom"><img src="AMSS.jpeg" class="logo" height=100/></td></tr>
    </table></td>
 </tr></table>
@@ -1260,6 +1262,18 @@ var activeLink = "registration";
 		Also htmlspecialchars is used to prevents attackers from exploiting 
 		the code by injecting HTML or JavaScript code (Cross-site Scripting attacks) in forms    --> 			
 		<form id="contact-form" name="myform" action="Registration.php#title_registration"  method="post">
+<div style="float: right;">
+<label>Gender*</label><br/>
+  <select class="dropdown" name="gender" style="display: inline-block; padding: 10px; background-color: #F9F9F2; border-radius: 5px; border: none; width:180px; height: 60px">
+     <option value="" <?php if (isset($clientGender) && $clientGender == '') {echo 'selected';} ?> disabled selected>Please choose gender</option>
+     <option value="male" <?php if (isset($clientGender) && $clientGender == 'male') {echo 'selected';} ?>>Male</option>
+    <option value="female" <?php if (isset($clientGender) && $clientGender == 'female') {echo 'selected';} ?>>Female</option>
+   <option value="others" <?php if (isset($clientGender) && $clientGender == 'others') {echo 'selected';} ?>>Others</option>
+  </select>
+<?php if(isset($err_gender)) {echo $err_gender;}?>
+<br/>
+</div>
+		
 
 			<label>Name*</label><br/>
 			<input type="text" name="name" placeholder="Please enter your full name" value="<?php if (isset($clientName)) {echo $clientName;} ?>"/>
@@ -1279,7 +1293,6 @@ var activeLink = "registration";
 
 
 
-		
   
 
  <div> <label>Institute*</label></div><br/>
@@ -1298,6 +1311,11 @@ var activeLink = "registration";
 			<br/>
 			
 			<input type="submit" name="action" class="send-mail-button" value="Radio">
+
+
+
+
+
 		</form>
 	</div> <!-- end contact-form-wrapper -->
 

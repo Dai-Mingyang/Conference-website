@@ -1,3 +1,4 @@
+
 * 
 {
 	font-family: "Segoe UI", Arial, Verdana, sans-serif;
@@ -286,3 +287,13 @@ p {
 		max-width:none;
 	}
 }
+
+.shadowed {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cta {
+			background-color: #f5f5f5;
+			padding: 20px;
+		}
