@@ -9,14 +9,9 @@ Registration
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="stoc2022.css">
-<link rel="icon" type="image/png" href="icon.jpg" />
+<link rel="shortcut icon" type="image/jpg" href="icon.jpg" />
 <script src="jquery.js"></script>
-<script>
-$(document).ready(function() {
-    $("#navigationbar").load("navbar.html"); 
-    $("#header").load("header.html");
-  });
-</script>
+<style>li{list-style: none}</style>
 
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 
@@ -1220,13 +1215,107 @@ $(document).ready(function() {
 
 
 <body>
+<div id="header">
+			
+				<div class="content">
+                                                                          
+                                                                                             
+                                                                              
+
+					
+					<div id="navWrapper">
+
+						<div class="contentL">
+							<ul class="nav movedx" data-movedx-mid="1">
+								<li class="navitem"  list-style="none">
+									<a href="index.html#title_home"> <span data-title="Home">Home</span> </a>
+								</li>
+								<li class="navitem">
+									<a href="index.html#title_home"> <span data-title="General Information">General Information</span> </a>
+                                                                                                                                 <ul class="subnav">
+                                                                                                                                                                <li>
+											<a href="Schedule.html#title_schedule" >Schedule</a>
+										</li>
+                                                                                                                                                                <li>
+											<a href="Speakers.html#title_speakers">Speakers</a>
+										</li>
+										<li>
+											<a href="Venue.html#title_venue" >Venue</a>
+										</li>
+		
+									</ul>
+								</li>
+								<li class="navitem">
+									<a class="active" href="Registration.php#title_registration" > <span data-title="Registration">Registration</span> </a>
+
+								  </li>
+						
+								
+							      </ul>
+						</div>
+                                                                                           <div class="contentR">
+                                                                                            <ul class="nav movedx" data-movedx-mid="1">
+                                                                                            <li class="navitem">
+									<a href="javascript:;" target=""> <span data-title="More Information">More Info.</span> </a>
+                                                                                                                                    <ul class="subnav">
+										<li>
+											<a href="index.html#title_sponsors">Sponsors</a>
+										</li>
+										<li>
+											<a href="about.html" target="_self">Feedback</a>
+										</li>
+									</ul>
+								  </li>
+                                                                                             </ul>
+                                                                                            </div>
+                                                                                             <div class="contentS">
+                                                                                            <ul class="nav movedx" data-movedx-mid="1">
+                                                                                            <li class="navitem"  list-style="none">
+									<a  href="index.html#title_home" > <span data-title="Home">Home</span> </a>
+								</li>
+                                                                                            <li class="navitem">
+									<a class="active" href="javascript:;" target=""> <span data-title="More">More</span> </a>
+                                                                                                                                    <ul class="subnav">
+										<li>
+											<a href="Schedule.html#title_schedule">Schedule</a>
+										</li>
+                                                                                                                                                                <li>
+											<a href="Speakers.html#title_speakers" >Speakers</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a  href="Venue.html#title_venue" target="_self">Venue</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a class="active" href="Registration.php#title_registration" target="_self">Registration</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a href="index.html#title_sponsors" target="_self">Sponsors</a>
+										</li>
+										<li>
+											<a href="about.html" target="_self">Feedback</a>
+										</li>
+										
+									</ul>
+								  </li>
+                                                                                             </ul>
+                                                                                            </div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			
+		</div>
+		
 
 <div class="page">
 
-<div id="header"></div>
-  <a id="title_registration"></a>
+<div style="text-align:center;">
+<img "Beijing" longdesc="Beijing Logic Meeting 2023" src="beijing.jpg"
+     style="float:left;max-width:900px;width:100%; margin-right:15px" />
+</div>
 
-<table>
+
+
+<table id="title_registration">
 <tr>
    <td ><h1 align="left">
    Beijing Logic Meeting<br>
@@ -1234,24 +1323,28 @@ $(document).ready(function() {
    </h1></td>
 
    <td style="text-align:left;vertical-align:bottom;padding:7px"><table>
-        <tr><td style="text-align:left;vertical-align:bottom"><a href="https://english.cas.cn/" target="_blank"><img src="CAS.png" class="logo"  height=60 width=230/><a></td>
-        <td style="text-align:left;vertical-align:bottom"><img src="AMSS.jpeg" class="logo" height=100/></td></tr>
+        <tr><td style="text-align:left;vertical-align:bottom"><a href="https://english.cas.cn/" target="_blank"><img src="CAS.jpeg" class="logo"  height=110/><a></td>
+        <td style="text-align:left;vertical-align:bottom"><img src="AMSS.jpg" class="logo" height=100/></td></tr>
    </table></td>
 </tr></table>
 
 
 <div class="main">
 
-<script>
-var activeLink = "registration";
-</script>
+
 <div class="menu" id="navigationbar">
 </div>
 
 <div class="maincontent">
 <a id="title_registration"></a>
 
-<h2>Registration</h2>
+<h1>Registration</h1>
+<strong>Please enter your information in English.</strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+
+
+<pre>
+
+</pre>
 
 <div class="contact-form-wrapper">
 			
@@ -1319,6 +1412,18 @@ var activeLink = "registration";
 		</form>
 	</div> <!-- end contact-form-wrapper -->
 
+<pre>
+
+</pre>
+
+<pre>
+
+</pre>
+
+<pre>
+
+</pre>
+<p>© Beijing Logic Meeting 2023.</p>
 
 </div></div>
 </body>

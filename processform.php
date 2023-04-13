@@ -25,6 +25,24 @@ $mail->Host       = 'smtp.qq.com';
 
 if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 
+
+    // 定义记录文件路径和最大发送次数
+$record_file = 'send_record.txt';
+$max_send_count = 5;
+
+// 获取当前 IP 地址
+$client_ip = $_SERVER['REMOTE_ADDR'];
+
+// 获取记录文件中的发送记录
+$send_record = array();
+if (file_exists($record_file)) {
+    $send_record = json_decode(file_get_contents($record_file), true);
+}
+
+// 获取当前 IP 的发送记录
+$ip_record = isset($send_record[$client_ip]) ? $send_record[$client_ip] : array('count' => 0, 'last_send_time' => 0);
+
+
 	// it is going to check for the POST superglobal with the value
 	// if it does exist, then it will just create a new variable. 
 	// And assign that value to that variable
@@ -119,7 +137,8 @@ if (isset($_POST['remark'])) {
 		// issue the mail command
 		// Just to remind PHP doesn't actually mail anything
 	    // Mail is handled by your server's send mail command.
-		if ($mail->send()):	
+		if ($ip_record['count'] < $max_send_count ):	
+		    $mail->send();
 			$msg = "Thank You! Your message has been sent.";
 			// The following code will empty the input field after form has be emailed
 			
@@ -137,7 +156,8 @@ if (isset($_POST['remark'])) {
 		 $mail->send();
 		 
 		 
-		 
+		 $send_record[$client_ip] = array('count' => $ip_record['count'] + 1);
+         file_put_contents($record_file, json_encode($send_record));
 		 
 			
 			

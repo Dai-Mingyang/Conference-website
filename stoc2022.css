@@ -140,11 +140,6 @@ p {
 	font-size:12px;
 }
 
-#sponsors
-{
-	float:right;
-	width:300px;
-}
 
 .sidebar a.droplink
 {
@@ -152,6 +147,46 @@ p {
 	cursor: default;
 	color: #000000;
 }
+
+
+
+
+
+
+
+
+
+
+
+#header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.8);border-bottom: #999900 1px solid; z-index:99 }
+#header .contentR { display:block; height: 40px;padding:0 0; position:absolute;right:0 }
+#header .content { height: 40px;padding:0 0; float:left }
+#header .contentL { display:block; height: 40px;padding:0 0; float:left }
+#header .contentS { display:none}
+#header .nav { }
+#header .nav > li { float: left; font-size: 14px; height: 100%; top:0 }
+#header .nav > li > a { display: block; padding: 0 10px; height: 44px; line-height: 16px; font-weight: 700; position: relative; overflow: hidden; }
+#header .nav > li > a span { display: inline-block; position: relative; transition: all ease-out .3s }
+#header .nav .subnav { position: relative; width: 100px; background-color: rgba(249,249,242,.8); height: auto; z-index: 199; border-top: 2px solid #BF0000; overflow: hidden; visibility: hidden; opacity: 0; transition: all .36s ease }
+
+
+#header .nav .subnav li { width: 100% }#header .nav .subnav li a { font-weight: 600; padding: 4px 7px; line-height: 22px; display: block; transition: all .2s ease-in-out; font-size: 13px }
+#header .nav > li:hover .subnav { opacity: 1; visibility: visible }
+#header .nav > li:hover a span, #header .nav > li a.active span,#header .nav > li:hover a i, #header .nav > li a.active i { color: #BF0000; }
+#header .nav .subnav li a:hover, #header .nav .subnav li a.active { padding-left: 14px; color: #BF0000 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width : 825px)
 {
@@ -226,7 +261,7 @@ p {
 
 	.logo
 	{
-		height:50px;
+		height:60px;
 	}
 
 	.sideL1Active
@@ -244,7 +279,22 @@ p {
 	{
 		float:none;
 	}
+
+#header .contentR {  display:none}
+
+#header .contentL {  display:none}
+
+#header .contentS {  display:block; height: 40px;padding:0 0; position:absolute;right:0  }
+
+
+
+	
 }
+
+
+
+
+
 
 @media only screen and (max-width : 600px)
 {

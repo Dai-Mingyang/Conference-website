@@ -8,33 +8,119 @@
 <link rel="stylesheet" type="text/css" href="stoc2022.css">
 <link rel="icon" type="image/png" href="icon.jpg" />
 
-
 <script src="jquery.js"></script>
-<script>
-$(document).ready(function() {
-    $("#navigationbar").load("navbar.html"); 
-    $("#header").load("header.html");
-  });
-</script>
+<style>li{list-style: none}</style>
+</head>
 
 
 
 <body>
 
+<div id="header">
+			
+				<div class="content">
+                                                                          
+                                                                                             
+                                                                              
+
+					
+					<div id="navWrapper">
+
+						<div class="contentL">
+							<ul class="nav movedx" data-movedx-mid="1">
+								<li class="navitem"  list-style="none">
+									<a  class="active"  href="index.html#title_home" > <span data-title="Home">Home</span> </a>
+								</li>
+								<li class="navitem">
+									<a href="index.html#title_home" > <span data-title="General Information">General Information</span> </a>
+                                                                                                                                 <ul class="subnav">
+                                                                                                                                                                <li>
+											<a href="Schedule.html#title_schedule">Schedule</a>
+										</li>
+                                                                                                                                                                <li>
+											<a href="Speakers.html#title_speakers" >Speakers</a>
+										</li>
+										<li>
+											<a  href="Venue.html#title_venue" target="_self">Venue</a>
+										</li>
+		
+									</ul>
+								</li>
+								<li class="navitem">
+									<a href="Registration.php#title_registration" target=""> <span data-title="Registration">Registration</span> </a>
+
+								  </li>
+						
+								
+							      </ul>
+						</div>
+                                                                                           <div class="contentR">
+                                                                                            <ul class="nav movedx" data-movedx-mid="1">
+                                                                                            <li class="navitem">
+									<a href="javascript:;" target=""> <span data-title="More Information">More Info.</span> </a>
+                                                                                                                                    <ul class="subnav">
+										<li>
+											<a href="index.html#title_sponsors" target="_self">Sponsors</a>
+										</li>
+										<li>
+											<a href="about.html" target="_self">Feedback</a>
+										</li>
+									</ul>
+								  </li>
+                                                                                             </ul>
+                                                                                            </div>
+                                                                                             <div class="contentS">
+                                                                                            <ul class="nav movedx" data-movedx-mid="1">
+                                                                                            <li class="navitem"  list-style="none">
+									<a  class="active"  href="index.html#title_home" > <span data-title="Home">Home</span> </a>
+								</li>
+                                                                                            <li class="navitem">
+									<a href="javascript:;" target=""> <span data-title="More">More</span> </a>
+                                                                                                                                    <ul class="subnav">
+										<li>
+											<a href="Schedule.html#title_schedule">Schedule</a>
+										</li>
+                                                                                                                                                                <li>
+											<a href="Speakers.html#title_speakers" >Speakers</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a  href="Venue.html#title_venue" target="_self">Venue</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a  href="Registration.php#title_registration" target="_self">Registration</a>
+										</li>
+                                                                                                                                                                 <li>
+											<a href="index.html#title_sponsors" target="_self">Sponsors</a>
+										</li>
+										<li>
+											<a href="about.html" target="_self">Feedback</a>
+										</li>
+										
+									</ul>
+								  </li>
+                                                                                             </ul>
+                                                                                            </div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			
+		</div>
+
+
+
+
 <div class="page">
 
-<div id="header"></div>
-
+<div style="text-align:center;">
+<img "Beijing" longdesc="Beijing Logic Meeting 2023" src="beijing.jpg"
+     style="float:left;max-width:900px;width:100%; margin-right:15px" />
+</div>
 
 <div class="main">
 
-<script>
-var activeLink = "home";
-</script>
 
-<div id="header"></div>
-<a id="title_home"></a>
-<table>
+
+<table id="title_home">
 <tr>
    <td ><h1 align="left">
    Beijing Logic Meeting<br>
@@ -42,13 +128,14 @@ var activeLink = "home";
    </h1></td>
 
    <td style="text-align:left;vertical-align:bottom;padding:7px"><table>
-        <tr><td style="text-align:left;vertical-align:bottom"><a href="https://english.cas.cn/" target="_blank"><img src="CAS.png" class="logo"  height=60 width=230/><a></td>
-        <td style="text-align:left;vertical-align:bottom"><img src="AMSS.jpeg" class="logo" height=100/></td></tr>
+        <tr><td style="text-align:left;vertical-align:bottom"><a href="https://english.cas.cn/" target="_blank"><img src="CAS.jpeg"  class="logo" height=110 /><a></td>
+        <td style="text-align:left;vertical-align:bottom"><img src="AMSS.jpg" class="logo" height=100/></td></tr>
    </table></td>
 </tr></table>
 
 <div class="menu" id="navigationbar">
 </div>
+
 
 
 
@@ -60,7 +147,7 @@ var activeLink = "home";
 <p>
 We are excited to announce the Beijing Logic Meeting 2023, a premier academic conference that will bring together leading researchers and practitioners in the field of logic from around the world. 
 <br>The conference will be held in <strong>Beijing, China</strong>, from <strong>24-28 July 2023</strong>, 
-and will feature three workshops: Model Theory, Set Theory and Computability with talks, panels, and discussions on the latest developments in logic.
+will feature talks in Model Theory, Set Theory and Computability.
 
 
 
@@ -69,24 +156,51 @@ and will feature three workshops: Model Theory, Set Theory and Computability wit
    <p><strong>Conference dates: 24-28 July 2023.</strong></p>
    <p><strong>Schedule: </strong>There will be five speakers reporting every day from Monday to Thursday, and <strong>Friday is free.</strong></p>
    <p><strong>Venue: Academy of Mathematics and Systems Science, Chinese Academy of Sciences.</strong></p>
-   <p><strong>Lunch and Dinner: </strong>Banquet style.</p>
 </p>
-
-<h4 style="color:Red;"> We will reimburse the travel expenses from overseas as well as the cost of lunch and dinner for everyone.</h4>
-
-
-<div class="shadowed cta" style="height: 355px; width: 180px; float: right;	">
 
 <h3> Featured Speakers </h3>
 <p>
-Beijing logic meeting 2023 will have three workshops:
+<strong>Computability:</strong>
+<p>
 <strong><ul>
-<li><a href="Set theory.html">Set theory</a>
-    <li><a href="Model theory.html">Model theory</a> 
-    <li><a href="Computability.html">Computability</a>
+<li><a href="Speakers.html#Bakh_M.Khoussainov">Bakh M.Khoussainov</a>
+    <li><a href="Speakers.html#Wei_Wang">Wei Wang</a> 
+    <li><a>Yue Yang <a style="color:red;"> (to be confirmed)</a></a>
+</ul>
+</strong>
+<hr style="height:4px;border:none;border-top:1px dashed #BF0000;" />
+<p>
+<strong>Model Theory:</strong>
+<p>
+<strong><ul>
+<li><a href="Speakers.html#Artem_Chernikov">Artem Chernikov</a>
+    <li><a >Kyle Gannon <a style="color:red;"> (to be confirmed)</a></a> 
+    <li><a href="Speakers.html#William_Johnson">William Johnson</a>
+<li><a href="Speakers.html#Olga_Kharlampovich">Olga Kharlampovich</a>
+<li><a href="Speakers.html#Junguk_Lee">Junguk Lee</a>
+<li><a >Katrin Tent <a style="color:red;"> (to be confirmed)</a></a> 
+<li><a href="Speakers.html#Chieu-Minh_Tran">Chieu-Minh Tran</a>
+<li><a href="Speakers.html#Ningyuan_Yao">Ningyuan Yao</a>
+<li><a href="Speakers.html#Jinhe_Ye">Jinhe Ye</a>
+<li><a href="Speakers.html#Tingxiang_Zou">Tingxiang Zou</a>
+</ul>
+</strong>
+<hr style="height:4px;border:none;border-top:1px dashed #BF0000;" />
+<p>
+<strong>Set Theory:</strong>
+<p>
+
+<strong><ul>
+<li><a>Longyun Ding <a style="color:red;"> (to be confirmed)</a></a>
+<li><a href="Speakers.html#Su_Gao">Su Gao</a>
+<li><a>David Schrittesser <a style="color:red;"> (to be confirmed)</a></a>
+    
 </ul>
 </strong>
 
+
+
+<div class="shadowed cta" style="height: 245px; width: 180px; float: right;	">
 
 <h3>Organizers:</h3>
 <p><a href="http://barmpalias.net/index.shtml" target="_blank">George Barmpalias</a>  
@@ -95,10 +209,15 @@ Beijing logic meeting 2023 will have three workshops:
    (CAS - AMSS)</p>
 <p><a href="https://sites.google.com/view/sklinoshome/" target="_blank">Rizos Sklinos</a>  
    (CAS - AMSS) </p>
+<p><a href="http://faculty.bjtu.edu.cn/sci/8629.html" target="_blank">Shichang Song</a> 
+   (Beijing Jiaotong University)</p>
+
 <p><a href="http://homepage.amss.ac.cn/research/homePage/2e7f836ebde342b180b18192bd2a03c2/myHomePage.html" target="_blank">Liuzhen Wu</a>  
    (CAS - AMSS)</p>
-<p><a href="http://www.math.ac.cn/people/assoprof/202206/t20220627_707851.html" target="_blank">Yinhe Peng</a> 
-   (CAS - AMSS)</p>
+
+
+
+
 </div>
 
 
@@ -112,7 +231,7 @@ Beijing logic meeting 2023 will have three workshops:
 <pre>
 
 </pre>
-   <a href="http://english.amss.cas.cn/"  target="_blank"><img src="amss2018-logo.png" style="width:255px" alt="AMSS logo"></a>
+   <a href="http://english.amss.cas.cn/"  target="_blank"><img src="amss2018-logo.png" style="width:340px" alt="AMSS logo"></a>
 <pre>
 <br></br>
 
@@ -123,7 +242,7 @@ Beijing logic meeting 2023 will have three workshops:
 
 
 
-<p>© Beijing Logic Meeting 2023. Last updated: Monday, 3 April 2023.</p>
+<p>© Beijing Logic Meeting 2023.</p>
 </div>
 </div>
 </div>
