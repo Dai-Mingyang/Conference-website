@@ -65,4 +65,24 @@ body
 	font-size: 0.95em;
 	text-align: left;
 }
+.dropdown
+{
+	display: inline-block; padding: 10px; background-color: #F9F9F2; border-radius: 5px; border: none; width:180px; height: 60px
+}
+
+@media only screen and (max-width : 600px)
+{
+	#contact-form  input[type=text],input[type=email]
+{
+	
+	width: 40%;
+	
+}
+
+.dropdown
+{
+	display: inline-block; padding: 10px; background-color: #F9F9F2; border-radius: 5px; border: none; width:140px; height: 60px
+}
+	
+}
 

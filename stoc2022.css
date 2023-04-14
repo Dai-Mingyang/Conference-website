@@ -4,6 +4,7 @@
 	font-family: "Segoe UI", Arial, Verdana, sans-serif;
 }
 
+
 h1 {
         font-size: 28px;
         font-weight: bold;
@@ -26,13 +27,69 @@ p {
 	font-size: 12px;
 }
 
-/* Page container layout */
 .page
 {
 	max-width:800px;
 	width:100%;
 	margin:10px auto;
 }
+
+ .maincontent
+{
+	height:auto;
+	margin:0px;
+	width:auto;
+	display:inline-block;
+}
+
+#header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.8);border-bottom: #999900 1px solid; z-index:99 }
+#header .contentR { display:block; height: 40px;padding:0 0; position:absolute;right:0 }
+#header .content { height: 40px;padding:0 0; float:left }
+#header .contentL { display:block; height: 40px;padding:0 0; float:left }
+#header .contentS { display:none}
+#header .nav { }
+#header .nav > li { float: left; font-size: 16px; height: 100%; top:0 }
+#header .nav > li > a { display: block; padding: 0 10px; height: 44px; line-height: 16px; font-weight: 700; position: relative; overflow: hidden; }
+#header .nav > li > a span { display: inline-block; position: relative; transition: all ease-out .3s }
+#header .nav .subnav { position: relative; width: 100px; background-color: rgba(249,249,242,.8); height: auto; z-index: 199; border-top: 2px solid #BF0000; overflow: hidden; visibility:hidden; opacity: 0;transition: all .36s ease }
+
+
+#header .nav .subnav li { width: 100% }#header .nav .subnav li a { font-weight: 600; padding: 4px 7px; line-height: 22px; display: block; transition: all .2s ease-in-out; font-size: 15px }
+#header .nav > li:hover .subnav { opacity:1 ; visibility:visible }
+#header .nav > li:hover a span, #header .nav > li a.active span,#header .nav > li:hover a i, #header .nav > li a.active i { color: #BF0000; }
+#header .nav .subnav li a:hover, #header .nav .subnav li a.active { padding-left: 14px; color: #BF0000 }
+
+
+.shadowedL {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 200px; width:340px; float:left; margin-top:10px; margin-left:10px ;
+}
+
+.shadowedR {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 200px; width:340px; float:right; margin-top:10px; margin-left:10px ;
+}
+
+.shadowedH {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cta {
+			background-color: #f5f5f5;
+			padding: 20px;
+		}
+		
+		
+@media only screen and (max-width : 1350px)
+{
+
+
+
+/* Page container layout */
+
 
 .header 
 {
@@ -87,47 +144,8 @@ p {
 }
 
 /* Sidebar Navigation */
-.sidebar {
-	border: 1px solid #999900;
-	background: #F9F9F2;
-	padding: 5px;
-	font-weight: bold;
-	font-size: 100%;
-	text-align: left;
-}
 
-.sidebar a:link {
-	color: #00469b;
-}
 
-.sidebar a:visited {
-	color: #00469b;
-}
-
-.sideHead {
-	font-size: 120%;
-	padding-bottom: 2px;
-	padding-left: 5px;
-	padding-top: 8px;
-}
-
-.sideL1 {
-	padding-bottom: 2px;
-	padding-left: 18px;
-	padding-top: 2px;
-}
-
-.sideL1Active {
-	padding-bottom: 1px;
-	padding-top: 1px;
-	padding-left: 9px;
-	background: #FFFFFF;
-	margin-right: -6px;
-	margin-left: 8px;
-	border-top: 1px solid #999900;
-	border-left: 1px solid #999900;
-	border-bottom: 1px solid #999900;
-}
 
 
 #columbia 
@@ -141,21 +159,18 @@ p {
 }
 
 
-.sidebar a.droplink
-{
-	text-decoration:none;
-	cursor: default;
-	color: #000000;
+
+.shadowedL {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 150px; width:240px; float:left; margin-top:10px; margin-left:10px ;
 }
 
-
-
-
-
-
-
-
-
+.shadowedR {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 150px; width:240px; float:right; margin-top:10px; margin-left:10px ;
+}
 
 
 #header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.8);border-bottom: #999900 1px solid; z-index:99 }
@@ -167,19 +182,16 @@ p {
 #header .nav > li { float: left; font-size: 14px; height: 100%; top:0 }
 #header .nav > li > a { display: block; padding: 0 10px; height: 44px; line-height: 16px; font-weight: 700; position: relative; overflow: hidden; }
 #header .nav > li > a span { display: inline-block; position: relative; transition: all ease-out .3s }
-#header .nav .subnav { position: relative; width: 100px; background-color: rgba(249,249,242,.8); height: auto; z-index: 199; border-top: 2px solid #BF0000; overflow: hidden; visibility: hidden; opacity: 0; transition: all .36s ease }
+#header .nav .subnav { position: relative; width: 100px; background-color: rgba(249,249,242,.8); height: auto; z-index: 199; border-top: 2px solid #BF0000; overflow: hidden; visibility:hidden; opacity: 0;transition: all .36s ease }
 
 
 #header .nav .subnav li { width: 100% }#header .nav .subnav li a { font-weight: 600; padding: 4px 7px; line-height: 22px; display: block; transition: all .2s ease-in-out; font-size: 13px }
-#header .nav > li:hover .subnav { opacity: 1; visibility: visible }
+#header .nav > li:hover .subnav { opacity:1 ; visibility:visible }
 #header .nav > li:hover a span, #header .nav > li a.active span,#header .nav > li:hover a i, #header .nav > li a.active i { color: #BF0000; }
 #header .nav .subnav li a:hover, #header .nav .subnav li a.active { padding-left: 14px; color: #BF0000 }
 
 
-
-
-
-
+}
 
 
 
@@ -280,13 +292,24 @@ p {
 		float:none;
 	}
 
-#header .contentR {  display:none}
-
-#header .contentL {  display:none}
-
-#header .contentS {  display:block; height: 40px;padding:0 0; position:absolute;right:0  }
 
 
+#header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.8);border-bottom: #999900 1px solid; z-index:99 }
+#header .contentR { display:none}
+#header .content { height: 40px;padding:0 0; float:left }
+#header .contentL { display:none }
+#header .contentS {display:block; height: 40px;padding:0 0; position:absolute;right:0}
+#header .nav { }
+#header .nav > li { float: left; font-size: 14px; height: 100%; top:0 }
+#header .nav > li > a { display: block; padding: 0 10px; height: 44px; line-height: 16px; font-weight: 700; position: relative; overflow: hidden; }
+#header .nav > li > a span { display: inline-block; position: relative; transition: all ease-out .3s }
+#header .nav .subnav { position: relative; width: 100px; background-color: rgba(249,249,242,.8); height: auto; z-index: 199; border-top: 2px solid #BF0000; overflow: hidden; display:none; transition: all .36s ease }
+
+
+#header .nav .subnav li { width: 100% }#header .nav .subnav li a { font-weight: 600; padding: 4px 7px; line-height: 22px; display: block; transition: all .2s ease-in-out; font-size: 13px }
+#header .nav > li:hover .subnav { display:block }
+#header .nav > li:hover a span, #header .nav > li a.active span,#header .nav > li:hover a i, #header .nav > li a.active i { color: #BF0000; }
+#header .nav .subnav li a:hover, #header .nav .subnav li a.active { padding-left: 14px; color: #BF0000 }
 
 	
 }
@@ -338,12 +361,3 @@ p {
 	}
 }
 
-.shadowed {
-    border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.cta {
-			background-color: #f5f5f5;
-			padding: 20px;
-		}

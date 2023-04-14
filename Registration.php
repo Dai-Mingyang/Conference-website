@@ -1357,7 +1357,7 @@ Registration
 		<form id="contact-form" name="myform" action="Registration.php#title_registration"  method="post">
 <div style="float: right;">
 <label>Gender*</label><br/>
-  <select class="dropdown" name="gender" style="display: inline-block; padding: 10px; background-color: #F9F9F2; border-radius: 5px; border: none; width:180px; height: 60px">
+  <select class="dropdown" name="gender" >
      <option value="" <?php if (isset($clientGender) && $clientGender == '') {echo 'selected';} ?> disabled selected>Please choose gender</option>
      <option value="male" <?php if (isset($clientGender) && $clientGender == 'male') {echo 'selected';} ?>>Male</option>
     <option value="female" <?php if (isset($clientGender) && $clientGender == 'female') {echo 'selected';} ?>>Female</option>
