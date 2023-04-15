@@ -1210,6 +1210,12 @@ Registration
   background: inherit !important;
 }
 </style>
+
+<style>
+a:link {color: #686868;} 
+a:visited {color: #686868 ;}  
+a:hover {color:#000000;}  /* 鼠标移动到链接上 */
+</style>
 </head>
 
 
@@ -1250,13 +1256,8 @@ Registration
 
 								  </li>
 						
-								
-							      </ul>
-						</div>
-                                                                                           <div class="contentR">
-                                                                                            <ul class="nav movedx" data-movedx-mid="1">
-                                                                                            <li class="navitem">
-									<a href="javascript:;" target=""> <span data-title="More Information">More Info.</span> </a>
+								<li class="navitem">
+									<a href="javascript:;" target=""> <span data-title="More Information">More Info</span> </a>
                                                                                                                                     <ul class="subnav">
 										<li>
 											<a href="index.html#title_sponsors">Sponsors</a>
@@ -1266,8 +1267,9 @@ Registration
 										</li>
 									</ul>
 								  </li>
-                                                                                             </ul>
-                                                                                            </div>
+							      </ul>
+						</div>
+                                                                                           
                                                                                              <div class="contentS">
                                                                                             <ul class="nav movedx" data-movedx-mid="1">
                                                                                             <li class="navitem"  list-style="none">
@@ -1339,7 +1341,7 @@ Registration
 <a id="title_registration"></a>
 
 <h1>Registration</h1>
-<strong>Please enter your information in English.</strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<b><strong>Please enter your information in English.</strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b>
 
 
 <pre>

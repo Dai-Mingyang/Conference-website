@@ -1210,6 +1210,12 @@ Feedback
   background: inherit !important;
 }
 </style>
+
+<style>
+a:link {color: #686868;} 
+a:visited {color: #686868 ;}  
+a:hover {color:#000000;}  /* 鼠标移动到链接上 */
+</style>
 </head>
 
 
@@ -1250,13 +1256,8 @@ Feedback
 
 								  </li>
 						
-								
-							      </ul>
-						</div>
-                                                                                           <div class="contentR">
-                                                                                            <ul class="nav movedx" data-movedx-mid="1">
-                                                                                            <li class="navitem">
-									<a class="active" href="javascript:;" target=""> <span data-title="More Information">More Info.</span> </a>
+                        <li class="navitem">
+									<a class="active" href="javascript:;" target=""> <span data-title="More Information">More Info</span> </a>
                                                                                                                                     <ul class="subnav">
 										<li>
 											<a href="index.html#title_sponsors">Sponsors</a>
@@ -1266,8 +1267,10 @@ Feedback
 										</li>
 									</ul>
 								  </li>
-                                                                                             </ul>
-                                                                                            </div>
+								
+							      </ul>
+						</div>
+                                                                                           
                                                                                              <div class="contentS">
                                                                                             <ul class="nav movedx" data-movedx-mid="1">
                                                                                             <li class="navitem"  list-style="none">
@@ -1351,7 +1354,7 @@ Feedback
 		the code by injecting HTML or JavaScript code (Cross-site Scripting attacks) in forms    --> 			
 		<form id="contact-form" name="myform" action="Feedback.php#title_feedback"  method="post">
 <div style="float: left;">
-If you have some questions or suggestions about the <strong>Beijing logic meeting 2023</strong> , please leave your email and leave a message.
+<b>If you have some questions or suggestions about the <strong>Beijing logic meeting 2023</strong> , please leave your email and leave a message.</b>
 <p>
 <label>Name(optional)</label><br/>
 			<input type="text" name="name" value="<?php if (isset($clientName)) {echo $clientName;} ?>"/>
