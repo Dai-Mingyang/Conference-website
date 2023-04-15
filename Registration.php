@@ -1262,7 +1262,7 @@ Registration
 											<a href="index.html#title_sponsors">Sponsors</a>
 										</li>
 										<li>
-											<a href="about.html" target="_self">Feedback</a>
+											<a href="Feedback.php#title_feedback" target="_self">Feedback</a>
 										</li>
 									</ul>
 								  </li>
@@ -1292,7 +1292,7 @@ Registration
 											<a href="index.html#title_sponsors" target="_self">Sponsors</a>
 										</li>
 										<li>
-											<a href="about.html" target="_self">Feedback</a>
+											<a href="Feedback.php#title_feedback" target="_self">Feedback</a>
 										</li>
 										
 									</ul>
@@ -1358,7 +1358,7 @@ Registration
 <div style="float: right;">
 <label>Gender*</label><br/>
   <select class="dropdown" name="gender" >
-     <option value="" <?php if (isset($clientGender) && $clientGender == '') {echo 'selected';} ?> disabled selected>Please choose gender</option>
+     <option value="" <?php if (isset($clientGender) && $clientGender == '') {echo 'selected';} ?> disabled selected> Gender</option>
      <option value="male" <?php if (isset($clientGender) && $clientGender == 'male') {echo 'selected';} ?>>Male</option>
     <option value="female" <?php if (isset($clientGender) && $clientGender == 'female') {echo 'selected';} ?>>Female</option>
    <option value="others" <?php if (isset($clientGender) && $clientGender == 'others') {echo 'selected';} ?>>Others</option>
@@ -1369,7 +1369,7 @@ Registration
 		
 
 			<label>Name*</label><br/>
-			<input type="text" name="name" placeholder="Please enter your full name" value="<?php if (isset($clientName)) {echo $clientName;} ?>"/>
+			<input type="text" name="name" placeholder="Please enter full name" value="<?php if (isset($clientName)) {echo $clientName;} ?>"/>
 			<?php if(isset($err_name)) {echo $err_name;}?>
 			<br/>
 			
@@ -1378,7 +1378,7 @@ Registration
 
 
  <div> <label>E-mail*</label></div><br/>
-<div><input type="text" name="email" placeholder="Please enter your valid email addess" value="<?php if (isset($clientEmail)) {echo $clientEmail;} ?>"/></div>
+<div><input type="text" name="email" placeholder="Please enter email addess" value="<?php if (isset($clientEmail)) {echo $clientEmail;} ?>"/></div>
 <?php if(isset($err_email)) {echo $err_email;}?>
 <br/>
 
@@ -1395,7 +1395,7 @@ Registration
 			<br/>
 			
 			<label>Research areas of interest*</label><br/>
-			<input type="text" name="field" placeholder="Please enter your interest areas" value="<?php if (isset($clientSubject)) {echo $clientSubject;} ?>"/>
+			<input type="text" name="field" placeholder="Please enter interest areas" value="<?php if (isset($clientSubject)) {echo $clientSubject;} ?>"/>
 			<?php if(isset($err_subject)) {echo $err_subject;}?>
 			<br/>
 			

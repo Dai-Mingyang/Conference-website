@@ -75,6 +75,7 @@ p {
 .shadowedH {
     border: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 245px; width: 180px; float: right;
 }
 
 .cta {
@@ -293,8 +294,13 @@ p {
 	}
 
 
+.shadowedH {
+    border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  height: 240px; width: 140px; float: right;
+}
 
-#header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.8);border-bottom: #999900 1px solid; z-index:99 }
+#header { position: fixed; top:0; width: 100%;background: rgba(249,249,242,.9);border-bottom: #999900 1px solid; z-index:99 }
 #header .contentR { display:none}
 #header .content { height: 40px;padding:0 0; float:left }
 #header .contentL { display:none }
@@ -310,6 +316,8 @@ p {
 #header .nav > li:hover .subnav { display:block }
 #header .nav > li:hover a span, #header .nav > li a.active span,#header .nav > li:hover a i, #header .nav > li a.active i { color: #BF0000; }
 #header .nav .subnav li a:hover, #header .nav .subnav li a.active { padding-left: 14px; color: #BF0000 }
+
+
 
 	
 }
