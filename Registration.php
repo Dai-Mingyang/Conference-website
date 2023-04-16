@@ -1237,19 +1237,8 @@ a:hover {color:#000000;}  /* 鼠标移动到链接上 */
 									<a href="index.html#title_home"> <span data-title="Home">Home</span> </a>
 								</li>
 								<li class="navitem">
-									<a href="index.html#title_home"> <span data-title="General Information">General Information</span> </a>
-                                                                                                                                 <ul class="subnav">
-                                                                                                                                                                <li>
-											<a href="Schedule.html#title_schedule" >Schedule</a>
-										</li>
-                                                                                                                                                                <li>
-											<a href="Speakers.html#title_speakers">Speakers</a>
-										</li>
-										<li>
-											<a href="Venue.html#title_venue" >Venue</a>
-										</li>
-		
-									</ul>
+									<a href="Speakers.html#title_speakers"> <span data-title="Speakers">Speakers</span> </a>
+                                                                                                                               
 								</li>
 								<li class="navitem">
 									<a class="active" href="Registration.php#title_registration" > <span data-title="Registration">Registration</span> </a>
@@ -1257,8 +1246,14 @@ a:hover {color:#000000;}  /* 鼠标移动到链接上 */
 								  </li>
 						
 								<li class="navitem">
-									<a href="javascript:;" target=""> <span data-title="More Information">More Info</span> </a>
+									<a href="javascript:;" target=""> <span data-title="More Information">More Information</span> </a>
                                                                                                                                     <ul class="subnav">
+                                                                                                                                     <li>
+											<a href="Schedule.html#title_schedule" >Schedule</a>
+										</li>
+                                        <li>
+											<a href="Venue.html#title_venue" >Venue</a>
+										</li>
 										<li>
 											<a href="index.html#title_sponsors">Sponsors</a>
 										</li>
@@ -1319,9 +1314,10 @@ a:hover {color:#000000;}  /* 鼠标移动到链接上 */
 
 <table id="title_registration">
 <tr>
-   <td ><h1 align="left">
+    <td ><h1 align="left">
    Beijing Logic Meeting<br>
-   July 24-28, 2023 in Beijing, China 
+   July 24-28, 2023 <br>
+   Beijing, China 
    </h1></td>
 
    <td style="text-align:left;vertical-align:bottom;padding:7px"><table>
@@ -1414,19 +1410,15 @@ a:hover {color:#000000;}  /* 鼠标移动到链接上 */
 		</form>
 	</div> <!-- end contact-form-wrapper -->
 
-<pre>
-
-</pre>
 
 <pre>
 
 </pre>
 
-<pre>
 
-</pre>
-<p>© Beijing Logic Meeting 2023.</p>
 
-</div></div>
+</div>
+<center><p>© Beijing Logic Meeting 2023.</p></center>
+</div>
 </body>
 </html>
